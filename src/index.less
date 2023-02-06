@@ -1,0 +1,375 @@
+@import 'themes/main.less'; // default application theme
+
+body {
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.ant-table.ant-table-small {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+
+  .ant-table-expanded-row-fixed {
+    padding: 0;
+
+    .ant-table-cell {
+      background: @expanded-row-bg;
+    }
+  }
+
+  .ant-table-expanded-row {
+    .expanded-row-tbl {
+      padding: 0 75px;
+    }
+
+    .ant-table.ant-table-small {
+      box-shadow: none;
+    }
+
+    .ant-table-cell {
+      background: @expanded-row-bg;
+    }
+  }
+  // anchor tag
+  a {
+    color: @text-color;
+  }
+
+  a:hover {
+    color: @primary-color;
+  }
+}
+
+.summary-row {
+  background: @expanded-row-bg;
+}
+
+.summary-title {
+  color: rgb(0 0 0 / 85%);
+  font-weight: 500;
+}
+
+.ant-table-content {
+  border-radius: 10px;
+  // tr:last-child {
+  //   border-bottom-right-radius: 6px;
+  //   border-bottom-left-radius: 6px;
+  // }
+}
+
+/* table components */
+.ant-table-filter-dropdown {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  border-radius: 10px;
+}
+
+// Compatible with IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+/* row table css */
+.box-shadow {
+  box-shadow: 0 6px 10px rgb(0 0 0 / 8%), 0 0 6px rgb(0 0 0 / 5%);
+}
+
+.list-desc {
+  margin-bottom: 10px;
+  padding-left: 0;
+  padding-right: 10px;
+  // width: 90%;
+  white-space: pre-line;
+  word-break: break-all;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.no-display {
+  opacity: 0;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden;
+  display: none;
+}
+
+.no-display-tbl {
+  opacity: 0;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden;
+  display: none;
+}
+
+.profile-img-title {
+  // font-size: 15px;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 700 !important;
+}
+
+.b-r10 {
+  border-radius: 10px;
+}
+
+.list-actions {
+  opacity: 0;
+}
+
+.ant-table-row:hover {
+  .list-actions {
+    transition: 0.15s linear all;
+    opacity: 1;
+  }
+}
+
+/* input component */
+.ant-input {
+  border-radius: 10px;
+}
+
+/* popover component */
+.ant-popover-inner {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+/* dropdown component */
+.ant-dropdown-menu {
+  border-radius: 10px;
+}
+
+.ant-modal-content {
+  border-radius: 10px;
+}
+
+.ant-modal-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.ant-tooltip-inner {
+  border-radius: 10px;
+}
+
+.ant-table-filter-dropdown-btns {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.selectiontext {
+  font-size: 14px !important;
+}
+// page header component
+.page-header {
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* read only form label */
+.readformlabel {
+  .ant-form-item-label {
+    font-weight: 500;
+  }
+}
+
+/* pro layout header */
+.ant-pro-global-header {
+  background: @drawer-bg;
+}
+
+.ant-pro-sider-logo img {
+  width: 38px;
+  height: 22px;
+  margin-left: -3px;
+}
+
+@media (max-width: @screen-lg) {
+  .ant-pro-sider-logo img {
+    width: 38px;
+    height: 22px;
+  }
+}
+
+.appsmall path {
+  fill: red;
+}
+
+.img-crop-modal {
+  .ant-btn {
+    height: 32px;
+    padding: 4px 16px;
+    font-size: 14px;
+    border-radius: 32px;
+  }
+
+  .ant-btn-default {
+    color: @primary-color;
+    border-color: @primary-color;
+  }
+}
+
+.attribute-cell {
+  color: @table-header-color;
+  font-weight: 500;
+  text-align: left;
+  background: @table-header-bg !important;
+}
+
+.floatright {
+  float: right;
+}
+
+.right-aligned-cell {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.document-tag {
+  border: 1px solid #d9d9d9;
+  color: @doc-tag-color;
+  background-color: @white-bg;
+  font-size: 12px;
+}
+
+.permission-tag {
+  border: 1px solid #3f51b5;
+  color: #3f51b5;
+  background-color: #e6ebf5;
+  font-size: 12px;
+}
+
+.gtbl-abs-toolbar {
+  .ant-pro-table-list-toolbar {
+    position: absolute !important;
+    top: -45px;
+    right: 0;
+  }
+}
+
+.no-margin-divider {
+  margin: 0 !important;
+}
+
+.no-margint-divider {
+  margin-top: 0 !important;
+}
+
+.no-marginb-divider {
+  margin-bottom: 0 !important;
+}
+
+.blue-tag {
+  border: 1px solid @primary-color;
+  color: @primary-color;
+  background-color: @primary-light-color;
+  font-size: 12px;
+}
+
+.yellow-tag {
+  border: 1px solid @pending-color;
+  color: @pending-color;
+  background-color: @pending-light-color;
+  font-size: 12px;
+}
+
+.red-tag {
+  border: 1px solid @danger;
+  color: @danger;
+  background-color: @danger-light-color;
+  font-size: 12px;
+}
+
+.empty-container {
+  padding: 24px 0;
+}
+
+.empty-state {
+  .ant-empty-image {
+    height: 62px;
+  }
+
+  display: flex;
+  height: 34vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.empty-state-simple {
+  .ant-empty-image {
+    height: 62px;
+  }
+
+  display: flex;
+  height: 30vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text {
+  white-space: pre-line;
+}
+
+.g6-component-tooltip {
+  padding: 6px 8px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  word-wrap: break-word;
+  background-color: rgb(0 0 0 / 75%);
+  border-radius: 10px;
+  /* stylelint-disable-next-line declaration-colon-newline-after, value-list-comma-newline-after */
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%),
+    0 9px 28px 8px rgb(0 0 0 / 5%);
+}

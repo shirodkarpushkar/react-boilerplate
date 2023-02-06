@@ -1,0 +1,97 @@
+{
+  "for_testing_stuff": {
+    "title": "Testing Page",
+    "description": "You can play with this page for testing and experimenting new features or configurations."
+  },
+  "select": {
+    "document_tag_placeholder": "Company, location, or product",
+    "document_placeholder": "Select documents",
+    "bizstep_placeholder": "Business Step",
+    "disposition_placeholder": "Disposition",
+    "product_lot_placeholder": "Select Primary ID",
+    "places_placeholder": "Enter address"
+  },
+  "event_types": {
+    "title": "Event Types",
+    "ok_text": "Done",
+    "commission": {
+      "title": "Commission",
+      "description": "Commission represents when one or more product items come into existence in a traceable supply chain. Commission events are typically logged at the farthest upstream point of the product journey - either the point of harvest or first documentation. Custom templates allow you to capture extra data about the products you’re commissioning, and the information is recorded onto a blockchain.",
+      "example_title": "Example: Recording information about potato harvest lots that will eventually be made into potato chips."
+    },
+    "decommission": {
+      "title": "Decommission",
+      "description": "A decommission event represents when a product exits the traced supply chain. The most common decommission instance is when a product is consumed (i.e. a customer purchases the product from a store). Another example would be if a product is damaged, destroyed, or for some reason needs to be removed from circulation.",
+      "example_title": "Example: A bag of potato chips are sold to the final consumer at a grocery store."
+    },
+    "ship": {
+      "title": "Ship",
+      "description_line1": "A Ship event reflects when one or more product items are moved from either one trading partner to another, reflecting a change of custody, or between your own internal locations. The product maintains its physical properties with a Ship event, it only moves from one business location to another.",
+      "description_line2": "A Ship event always accompanies either a Receive event, or a Rejection that notifies the shipper there was an issue with the original send event record. An internal ship event can also can be automatically received by selecting the checkbox in the event to streamline product movement internally.",
+      "example_title": "Example: A pallet of potato chips is shipped from a distribution center to a retailer."
+    },
+    "receive": {
+      "title": "Receive",
+      "description": "A receive event represents a trading partner acknowledging that the receipt of physical product at one of their business locations matches its send record. A receive event always comes after a send event that has been logged by the sender. If the recipient can see that the send record is incorrect, they have the option to reject it rather than receive it, which will notify the sender.",
+      "example_title": "Example: A pallet of potato chips is shipped from a distribution center to a retailer, and the retailer confirms receipt of the pallet matches what the sender claims to have sent."
+    },
+    "aggregate": {
+      "title": "Aggregate",
+      "description": "An aggregate event represents when multiple items of the same product are reversibly grouped together, either for shipment or storage. An aggregation will be assigned a logistical unit ID or SSCC, and will always be disaggregated again later in the supply chain. An example would be adding multiple cases to a single pallet for shipment, with the intention for it to be disaggregated again at the destination.",
+      "example_title": "Example: Grouping thirty identical cartons of potato chips onto a pallet to ship to a retailer."
+    },
+    "disaggregate": {
+      "title": "Disaggregate",
+      "description": "A disaggregate event is the reverse of an aggregate event, and represents when individually traceable product items from an aggregation are separated again. Disaggregation can only occur after aggregation. Nothing about the input items is changed, they are merely ungrouped to be treated as separate items again.",
+      "example_title": "Example: Unpacking thirty cartons of potato chips from a pallet."
+    },
+    "transform": {
+      "title": "Transform",
+      "description_line1": "Transform events represent when traceable product items are irreversibly changed as they move through your supply chain. They consist of one or more input items that become one or more output items, representing an irreversible change in physical properties, or in the way the product is grouped / traced.",
+      "description_line2": "It could be that raw materials are cut, processed or melted to make a new product, or that a product is packaged for consumption. Any transformation event occurs internally in one company, and the newly transformed output product will appear in the Current Inventory list for that product. Custom templates allow you to capture extra data about the products you’re transforming.",
+      "example1_title": "Example: A lot of potatoes are cut, cooked and processed into bags of potato chips.",
+      "example2_title": "Example: A fish is headed, gutted and turned into a package of fillets.",
+      "example3_title": "Example: Multiple lots of wheat are combined and processed into a single lot of flour."
+    }
+  },
+  "share_product": {
+    "submit_sucess": "Product shared successfully",
+    "share_product_title": "Share {{name}} with Network",
+    "form_fields": {
+      "company_title": "Company",
+      "company_placeholder": "Add Companies",
+      "message_title": "Message",
+      "message_placeholder": "Add a message"
+    }
+  },
+  "share_document": {
+    "submit_sucess": "Document shared successfully",
+    "share_document_title": "Share {{name}} with Network",
+    "form_fields": {
+      "documents_title": "Select documents to share",
+      "company_title": "Select a Trade Network Partner",
+      "company_placeholder": "Add Companies",
+      "message_title": "Message",
+      "message_placeholder": "Add a message",
+      "documents_placeholder": "Select documents"
+    },
+    "cancel_changes_title": "Are you sure you want to discard unsaved changes?",
+    "cancel_changes_description": "You have unsaved changes. If you leave this page, your changes will be lost.",
+    "cancel_changes_btn": "Discard",
+    "cancel_changes_btn_cancel": "Cancel"
+  },
+  "share_template": {
+    "submit_sucess": "Template shared successfully",
+    "share_template_title": "Share {{name}} with Network",
+    "form_fields": {
+      "company_title": "Company",
+      "company_placeholder": "Add Companies",
+      "message_title": "Message",
+      "message_placeholder": "Add a message"
+    }
+  },
+  "notification":{
+    "sec1_title":"Notifications",
+    "sec2_title":"Recent Activity"
+  }
+}

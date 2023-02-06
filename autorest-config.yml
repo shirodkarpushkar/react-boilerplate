@@ -1,0 +1,8 @@
+input-file: collection.json
+
+package-name: WebAPIClient
+override-client-name: webAPIClient
+
+typescript:
+  output-folder: src/services/api/client
+  enum-types: true

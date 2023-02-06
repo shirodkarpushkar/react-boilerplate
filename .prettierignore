@@ -1,0 +1,9 @@
+**/*.md
+**/*.svg
+**/*.ejs
+**/*.html
+**/*.yml
+**/*.yaml
+package.json
+CODEOWNERS
+src/services/api/client
